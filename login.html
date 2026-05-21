@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="INDEX.css">
+    <title>Connexion - NAEPERtech</title>
+</head>
+<body>
+    <section id="tgen">
+        <header>
+            <div id="div1">
+                <div class="sechead" id="secheadid1">
+                    <img src="NAEPERtech.jpg" alt="Logo NAEPERtech" id="img1">
+                    <div class="logo-content">
+                        <h1>NAEPERtech</h1>
+                        <p class="explainNAEPER">Innovation Technologique & Solutions Numériques</p>
+                    </div>
+                </div>
+
+                <div class="sechead" id="secheadid2">
+                    <a href="index.html" class="nav-link">ACCUEIL</a>
+                    <a href="about.html" class="nav-link">À PROPOS</a>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <a href="contact.html" class="nav-link">CONTACTEZ NOUS</a>
+                </div>
+
+                <div class="sechead" id="secheadid3">
+                    <a href="profile.html" class="nav-link">MON PROFIL</a>
+                    <a href="login.html" class="btn-login">CONNEXION</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <section id="login" class="main-section">
+                <h2>CONNEXION</h2>
+                <div class="login-container">
+                    <div class="login-form-wrapper">
+                        <h3>Se Connecter</h3>
+                        <form id="loginForm" class="login-form">
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-password">Mot de passe</label>
+                                <input type="password" id="login-password" name="password" required>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Se souvenir de moi</label>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Se Connecter</button>
+                        </form>
+
+                        <div class="login-links">
+                            <a href="#">Mot de passe oublié ?</a>
+                            <span>|</span>
+                            <a href="#">Créer un compte</a>
+                        </div>
+                    </div>
+
+                    <div class="login-benefits">
+                        <h3>Avantages de votre compte</h3>
+                        <ul>
+                            <li>✅ Suivi de vos projets</li>
+                            <li>✅ Accès aux ressources premium</li>
+                            <li>✅ Support prioritaire</li>
+                            <li>✅ Offres exclusives</li>
+                            <li>✅ Dashboard personnel</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Copyright © 2024 NAEPERtech. Tous droits réservés.</p> <br>
+            <div class="footer-blocks">
+                <div class="footer-block1">
+                    <h3>À propos</h3>
+                    <p>NAEPERtech est une entreprise dédiée à l'innovation technologique.</p>
+                    <a href="about.html">En savoir plus</a>
+                </div>
+                <div class="footer-block2">
+                    <h3>Contactez-nous</h3>
+                    <p>ayineemmanuel275@gmail.com</p>
+                    <a href="contact.html">Nous contacter</a>
+                </div>
+                <div class="footer-block3"> 
+                    <h3>Suivez-nous</h3> <br>
+                    <a href="https://www.facebook.com/profile.php?id=61574020317214&locale=fr_FR"><img src="facebook-icon.png" alt="Facebook" class="lien">Facebook</a>
+                    <a href="https://youtube.com/@emmanuelayine-x9w?si=dA9RoDDKUiu5JdiI"><img src="youtube-icon.png" alt="YouTube" class="lien">YouTube</a>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="index.js"></script>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+                
+                if (email && password) {
+                    alert('Connexion réussie! Bienvenue ' + email);
+                    console.log('Utilisateur connecté:', email);
+                    // Redirection vers le profil après connexion
+                    setTimeout(() => {
+                        window.location.href = 'profile.html';
+                    }, 1500);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
